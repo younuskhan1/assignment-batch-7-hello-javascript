@@ -53,7 +53,7 @@ console.log(isLGSeven(15));
 
 
 
-// Problem 4: Finding Bad data...
+// Problem 4: Finding Bad data number...
 
 function findingBadData(x) {
     if (!Array.isArray(x)) {
@@ -70,3 +70,24 @@ function findingBadData(x) {
     }
 }
 console.log(findingBadData([-4, -9, -5, -33, -55]));
+
+
+// Problem 5: Convert your gems into diamond
+function gemsToDiamond(firstFriendGem, secondFriendGem, thirdFriendGem) {
+    if (typeof firstFriendGem !== "number" || typeof secondFriendGem !== "number" || typeof thirdFriendGem !== "number") {
+        return "Please provide me just three positive numeric values.";
+    } else {
+        const firstFriendDiamonds = firstFriendGem * 21;
+        const secondFriendDiamonds = secondFriendGem * 32;
+        const thirdFriendDiamonds = thirdFriendGem * 43;
+        const totalDiamonds = firstFriendDiamonds + secondFriendDiamonds + thirdFriendDiamonds;
+        if (totalDiamonds > 2000) {
+            const remainingDiamonds = totalDiamonds - 2000;
+            return remainingDiamonds;
+        } else {
+            return totalDiamonds;
+        }
+    }
+
+}
+console.log(gemsToDiamond(20, 200, 50));
