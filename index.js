@@ -73,6 +73,8 @@ console.log(findingBadData([-4, -9, -5, -33, -55]));
 
 
 // Problem 5: Convert your gems into diamond
+
+
 function gemsToDiamond(firstFriendGem, secondFriendGem, thirdFriendGem) {
     if (typeof firstFriendGem !== "number" || typeof secondFriendGem !== "number" || typeof thirdFriendGem !== "number") {
         return "Please provide me just three positive numeric values.";
