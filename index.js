@@ -50,3 +50,23 @@ function isLGSeven(x) {
     }
 }
 console.log(isLGSeven(15));
+
+
+
+// Problem 4: Finding Bad data...
+
+function findingBadData(x) {
+    if (!Array.isArray(x)) {
+        return "Please provide me an array of numbers";
+    } else {
+        let badData = 0;
+        for (let i = 0; i < x.length; i++) {
+            const arrayNums = x[i];
+            if (arrayNums < 0) {
+                badData++;
+            }
+        }
+        return badData;
+    }
+}
+console.log(findingBadData([-4, -9, -5, -33, -55]));
